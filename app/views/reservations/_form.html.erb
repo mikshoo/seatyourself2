@@ -1,0 +1,22 @@
+<%= form_for(@reservations) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :neighborhood %><br />
+    <%= f.select :neighborhood, [['Downtown', 'downtown'], ['North End', 'north end'], ['East York', 'east york'], ['West End', 'west end'],['Scarborough', 'scarborough']] %>
+  </div>
+  <div class="field">
+    <%= f.label :cuisine %><br />
+    <%= f.select :cuisine, [['American', 'american'], ['Asian', 'asian'], ['African', 'african'], ['European', 'european'], ['South American', 'south american']] %>
+  </div>
+  <div class="field">
+    <%= f.label :availability %><br />
+    <%= f.select :availability, [['Yes', 'yes'], ['No', 'no']] %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

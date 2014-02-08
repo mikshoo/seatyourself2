@@ -1,0 +1,7 @@
+<h1>Restaurants</h1>
+<%= link_to "New Restaurant", "/restaurants/new" %>
+
+<% @restaurants.each do |restaurant| %>
+   <p> <%= restaurant.name %> <%= restaurant.neighborhood %> <%= restaurant.cuisine %> <%= restaurant.availability %></p>
+
+    <% end %>
